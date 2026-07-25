@@ -65,13 +65,21 @@ struct Queue{
     }
 };
 int main(){
+    int n;
+    cin >> n;
     Queue q;
-    q.dequeue();
-    q.printQueue();
-    q.enqueue(10);
-    q.enqueue(20);
-    q.enqueue(30);
-    q.enqueue(40);
-    q.dequeue();
-    q.printQueue();
+    string s;
+    for (int i = 0; i < n; i++){
+        cin >> s;
+        if (s == "enqueue"){
+            int x;
+            cin >> x;
+            q.enqueue(x);
+        } else if (s == "dequeue"){
+            q.dequeue();
+        } else if (s == "printQueue"){
+            q.printQueue();
+        }
+    }
+    return 0;
 }
