@@ -50,14 +50,21 @@ struct Stack{
     }
 };
 int main(){
-    Stack s(5);
-    s.pop();
-    s.push(10);
-    s.push(20);
-    s.push(30);
-    s.push(40);
-    s.push(50);
-    s.push(60);
-    s.pop();
-    s.printStack();
+    int n;
+    cin >> n;
+    Stack s(n);
+    string a;
+    for (int i=0;i<n;i++){
+        cin >> a;
+        if (a == "push"){
+            int x;
+            cin >> x;
+            s.push(x);
+        } else if (a == "pop"){
+            s.pop();
+        } else if (a == "printStack"){
+            s.printStack();
+        }
+    }
+ 
 }
