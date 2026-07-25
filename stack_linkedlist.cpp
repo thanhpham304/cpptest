@@ -53,14 +53,21 @@ struct Stack{
     }
 };
 int main(){
+    int n;
+    cin >> n;
     Stack s;
-    s.pop();
-    s.printStack();
-    s.push(10);
-    s.push(20);
-    s.push(30);
-    s.push(40);
-    s.push(50);
-    s.pop();
-    s.printStack();
+    string a;
+    for (int i = 0; i < n; i++){
+        cin >> a;
+        if (a == "push"){
+            int x;
+            cin >> x;
+            s.push(x);
+        } else if (a == "pop"){
+            s.pop();
+        } else if (a == "printStack"){
+            s.printStack();
+        }
+    }
+    return 0;
 }
